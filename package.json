@@ -1,39 +1,66 @@
 {
-  "name": "@opuscapita/react-filemanager",
-  "version": "1.0.12",
-  "description": "React file manager",
-  "scripts": {
-    "link-mode": "cross-env NODE_ENV=link webpack --config ./config/webpack.config.js",
-    "lint": "eslint src/client",
-    "upload-coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "test": "rimraf ./.nyc_output ./coverage && cross-env nyc --reporter=lcov --reporter=text mocha --require config/test/mocha-setup.js --recursive src/**/*.spec.js --require ignore-styles",
-    "test-all": "npm run test && npm run size",
-    "size": "npm run build && size-limit",
-    "start": "cross-env NODE_ENV=development showroom-scan src && babel-node --presets es2015,stage-0 www/index",
-    "build": "rimraf lib && cross-env NODE_ENV=production webpack --config ./config/webpack.config.js --hide-modules",
-    "prepublish": "npm run build",
-    "gh-pages:build": "rimraf .gh-pages-tmp && showroom-scan src && webpack --config ./config/doc/webpack.config.js && cp www/index.html .gh-pages-tmp"
+  "_from": "@opuscapita/react-filemanager",
+  "_id": "@opuscapita/react-filemanager@1.0.11",
+  "_inBundle": false,
+  "_integrity": "sha512-FQakSSjMygHLfTO2BtLC0uJxBeTOGdOeljIAtdfm4lAivGWBfVuDFNFS0y40jSvMueKjBUZvRIQJIV7IEw0WQQ==",
+  "_location": "/@opuscapita/react-filemanager",
+  "_phantomChildren": {
+    "fbjs": "0.8.16",
+    "loose-envify": "1.3.1",
+    "object-assign": "4.1.1"
   },
-  "license": "Apache-2.0",
-  "repository": "OpusCapita/react-filemanager",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@opuscapita/react-filemanager",
+    "name": "@opuscapita/react-filemanager",
+    "escapedName": "@opuscapita%2freact-filemanager",
+    "scope": "@opuscapita",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "main": "lib/index.js",
-  "files": [
-    "lib",
-    "README.md"
+  "_requiredBy": [
+    "#USER",
+    "/"
   ],
-  "peerDependencies": {
-    "react": "0.14.x || 15.x.x || 16.x.x",
-    "react-dom": "0.14.x || 15.x.x || 16.x.x"
+  "_resolved": "https://registry.npmjs.org/@opuscapita/react-filemanager/-/react-filemanager-1.0.11.tgz",
+  "_shasum": "73550a51639e5bd6bed7f987659e91a89355b766",
+  "_spec": "@opuscapita/react-filemanager",
+  "_where": "H:\\progetti\\feed_project\\src\\admin",
+  "bugs": {
+    "url": "https://github.com/OpusCapita/react-filemanager/issues"
   },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@opuscapita/react-svg": "2.0.1",
+    "@opuscapita/svg-icons": "1.1.1",
+    "core-js": "2.5.0",
+    "detect-it": "3.0.3",
+    "file-saver": "1.3.3",
+    "filesize": "3.5.11",
+    "lodash": "4.17.4",
+    "nanoid": "1.0.0",
+    "prop-types": "15.6.0",
+    "range-parser": "1.2.0",
+    "react-click-outside": "3.0.0",
+    "react-contextmenu": "2.8.0",
+    "react-dnd": "2.5.4",
+    "react-dnd-html5-backend": "2.5.4",
+    "react-dnd-scrollzone": "4.0.0",
+    "react-dropzone": "4.2.1",
+    "react-sortable-hoc": "0.6.8",
+    "react-virtualized": "9.12.0",
+    "sanitize-filename": "1.6.1",
+    "superagent": "3.6.3"
+  },
+  "deprecated": false,
+  "description": "React file manager",
   "devDependencies": {
     "@opuscapita/npm-scripts": "2.0.0",
     "@opuscapita/opuscapita-ui": "1.0.2-beta.4",
-    "@opuscapita/react-filemanager-connector-google-drive-v2": "1.0.12",
-    "@opuscapita/react-filemanager-connector-node-v1": "1.0.12",
+    "@opuscapita/react-filemanager-connector-google-drive-v2": "1.0.11",
+    "@opuscapita/react-filemanager-connector-node-v1": "1.0.11",
     "@opuscapita/react-showroom-client": "1.3.0-beta.6",
     "@opuscapita/react-showroom-server": "1.3.1",
     "autoprefixer": "6.7.6",
@@ -90,34 +117,14 @@
     "webpack-dev-middleware": "1.10.1",
     "write-file-webpack-plugin": "3.4.2"
   },
-  "dependencies": {
-    "@opuscapita/react-svg": "2.0.1",
-    "@opuscapita/svg-icons": "1.1.1",
-    "core-js": "2.5.0",
-    "detect-it": "3.0.3",
-    "file-saver": "1.3.3",
-    "filesize": "3.5.11",
-    "lodash": "4.17.4",
-    "nanoid": "1.0.0",
-    "prop-types": "15.6.0",
-    "range-parser": "1.2.0",
-    "react-click-outside": "3.0.0",
-    "react-contextmenu": "2.8.0",
-    "react-dnd": "2.5.4",
-    "react-dnd-html5-backend": "2.5.4",
-    "react-dnd-scrollzone": "4.0.0",
-    "react-dropzone": "4.2.1",
-    "react-sortable-hoc": "0.6.8",
-    "react-virtualized": "9.12.0",
-    "sanitize-filename": "1.6.1",
-    "superagent": "3.6.3"
-  },
-  "size-limit": [
-    {
-      "limit": "150KB",
-      "path": "./lib/index.js"
-    }
+  "files": [
+    "lib",
+    "README.md"
   ],
+  "homepage": "https://github.com/OpusCapita/react-filemanager#readme",
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "name": "@opuscapita/react-filemanager",
   "nyc": {
     "include": [
       "src/client/**/*.js"
@@ -128,5 +135,36 @@
       "**/demo/**/*.js"
     ],
     "all": true
-  }
+  },
+  "peerDependencies": {
+    "react": "0.14.x || 15.x.x || 16.x.x",
+    "react-dom": "0.14.x || 15.x.x || 16.x.x"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpusCapita/react-filemanager.git"
+  },
+  "scripts": {
+    "build": "rimraf lib && cross-env NODE_ENV=production webpack --config ./config/webpack.config.js --hide-modules",
+    "gh-pages:build": "rimraf .gh-pages-tmp && showroom-scan src && webpack --config ./config/doc/webpack.config.js && cp www/index.html .gh-pages-tmp",
+    "link-mode": "cross-env NODE_ENV=link webpack --config ./config/webpack.config.js",
+    "lint": "eslint src/client",
+    "prepublish": "npm run build",
+    "size": "npm run build && size-limit",
+    "start": "cross-env NODE_ENV=development showroom-scan src && babel-node --presets es2015,stage-0 www/index",
+    "test": "rimraf ./.nyc_output ./coverage && cross-env nyc --reporter=lcov --reporter=text mocha --require config/test/mocha-setup.js --recursive src/**/*.spec.js --require ignore-styles",
+    "test-all": "npm run test && npm run size",
+    "upload-coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "size-limit": [
+    {
+      "limit": "150KB",
+      "path": "./lib/index.js"
+    }
+  ],
+  "version": "1.0.11"
 }
